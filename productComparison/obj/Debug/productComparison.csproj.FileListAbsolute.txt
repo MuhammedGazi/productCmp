@@ -1,0 +1,10 @@
+C:\Users\Muhammed Gazi Çelenk\source\repos\productComparison\productComparison\bin\Debug\productComparison.exe.config
+C:\Users\Muhammed Gazi Çelenk\source\repos\productComparison\productComparison\bin\Debug\productComparison.exe
+C:\Users\Muhammed Gazi Çelenk\source\repos\productComparison\productComparison\bin\Debug\productComparison.pdb
+C:\Users\Muhammed Gazi Çelenk\source\repos\productComparison\productComparison\obj\Debug\productComparison.csproj.AssemblyReference.cache
+C:\Users\Muhammed Gazi Çelenk\source\repos\productComparison\productComparison\obj\Debug\productComparison.Properties.Resources.resources
+C:\Users\Muhammed Gazi Çelenk\source\repos\productComparison\productComparison\obj\Debug\productComparison.csproj.GenerateResource.cache
+C:\Users\Muhammed Gazi Çelenk\source\repos\productComparison\productComparison\obj\Debug\productComparison.csproj.CoreCompileInputs.cache
+C:\Users\Muhammed Gazi Çelenk\source\repos\productComparison\productComparison\obj\Debug\productComparison.exe
+C:\Users\Muhammed Gazi Çelenk\source\repos\productComparison\productComparison\obj\Debug\productComparison.pdb
+C:\Users\Muhammed Gazi Çelenk\source\repos\productComparison\productComparison\obj\Debug\productComparison.Form1.resources
