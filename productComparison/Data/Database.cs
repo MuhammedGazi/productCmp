@@ -32,22 +32,11 @@ namespace productComparison
                 Console.WriteLine($"Hata: {ex.Message}");
             }
         }
-        public void ProductInsert(string productName,int productPrice)
+        public SqlConnection GetConnection()
         {
-            SqlCommand cmd = new SqlCommand("insert into Product (ProductName,ProductPrice) values (@p1,@p2)",connection);
-            cmd.Parameters.AddWithValue("@p1", productName);
-            cmd.Parameters.AddWithValue("@p2", productPrice);
-            cmd.ExecuteNonQuery();
-            connection.Close();
+            return connection;
         }
-        public DataTable ProductListele()
-        {
-            SqlCommand cmd = new SqlCommand("select * from Product", connection);
-            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            adapter.Fill(dt);
-            return dt;
-        }
+
         // Bağlantıyı kapama
         public void CloseConnection()
         {

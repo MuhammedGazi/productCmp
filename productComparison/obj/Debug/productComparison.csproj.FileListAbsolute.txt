@@ -8,3 +8,4 @@ C:\Users\Muhammed Gazi Çelenk\source\repos\productComparison\productComparison\
 C:\Users\Muhammed Gazi Çelenk\source\repos\productComparison\productComparison\obj\Debug\productComparison.exe
 C:\Users\Muhammed Gazi Çelenk\source\repos\productComparison\productComparison\obj\Debug\productComparison.pdb
 C:\Users\Muhammed Gazi Çelenk\source\repos\productComparison\productComparison\obj\Debug\productComparison.Form1.resources
+C:\Users\Muhammed Gazi Çelenk\source\repos\productComparison\productComparison\obj\Debug\productComparison.Form2.resources
