@@ -39,7 +39,15 @@ namespace productComparison
 
         private void btnNextProductForm_Click(object sender, EventArgs e)
         {
-            Form1 form1 = new Form1(this);  
+            Form1 form1 = new Form1(this);
+
+            // Boyut ve konumu kopyala
+            form1.StartPosition = FormStartPosition.Manual;
+            form1.Location = this.Location;
+            form1.Size = this.Size;
+            form1.WindowState = this.WindowState; // Normal, Minimized, Maximized gibi durumu da aktar
+
+
             form1.Show();               
             this.Hide();
         }

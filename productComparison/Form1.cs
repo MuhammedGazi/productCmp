@@ -84,5 +84,21 @@ namespace productComparison
             dataGridView1.DataSource=productRepo.ProductListele();
 
         }
+
+        private void btnNextComparisonForm_Click(object sender, EventArgs e)
+        {
+                   
+            ComparisonForm comparisonForm = new ComparisonForm(this);
+
+            // Boyut ve konumu kopyala
+            comparisonForm.StartPosition = FormStartPosition.Manual;
+            comparisonForm.Location = this.Location;
+            comparisonForm.Size = this.Size;
+            comparisonForm.WindowState = this.WindowState; // Normal, Minimized, Maximized gibi durumu da aktar
+
+            comparisonForm.Show();
+            this.Hide();
+        
+    }
     }
 }

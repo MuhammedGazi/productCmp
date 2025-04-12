@@ -7,14 +7,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using productComparison.Data;
+using productComparison.Model;
 
 namespace productComparison
 {
     public partial class ComparisonForm: Form
     {
+        Form1 _form1;
+
+        public ComparisonForm(Form1 form1) : this()
+        {
+            _form1 = form1; // Aldığımız referansı saklıyoruz
+        }
+        private void btnBackProductForm_Click(object sender, EventArgs e)
+        {
+            _form1.Show();
+            this.Close();
+        }
+        private Database db;
+        private ProductRepo productRepo;
         public ComparisonForm()
         {
             InitializeComponent();
+            db = new Database();
+            productRepo = new ProductRepo(db.GetConnection());
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -29,14 +46,7 @@ namespace productComparison
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string urunAdi = "Coca Cola 2.5L";
-            Dictionary<string, decimal> fiyatlar = new Dictionary<string, decimal>()
-    {
-        { "Şok", 59.90m },
-        { "Migros", 62.50m },
-        { "A101", 0 },
-        { "BİM", 60.00m }
-    };
+            (Dictionary<string, int> fiyatlar,string urunAdi) = productRepo.ProductList(txtProductCom.Text);
 
             // GroupBox (ürün başlığı için)
             GroupBox gb = new GroupBox();
@@ -86,5 +96,7 @@ namespace productComparison
         {
 
         }
+
+
     }
 }
