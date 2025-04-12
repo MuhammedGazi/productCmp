@@ -16,7 +16,10 @@ namespace productComparison
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form2());
+            Application.Run(new ComparisonForm());
+            //Application.Run(new Form2());
+
+
         }
     }
 }

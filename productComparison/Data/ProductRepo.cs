@@ -17,6 +17,13 @@ namespace productComparison.Data
         {
             _connection = connection;
         }
+        private void MyconnectionState()
+        {
+            if (_connection.State != ConnectionState.Open)
+            {
+                _connection.Open();
+            }
+        }
         public void ProductInsert(Product product)
         {
             SqlCommand cmd = new SqlCommand("insert into Product (ProductName,ProductPrice,CompanyId) values (@p1,@p2,@p3)", _connection);
@@ -28,10 +35,7 @@ namespace productComparison.Data
         }
         public DataTable ProductListele()
         {
-            if (_connection.State != ConnectionState.Open)
-            {
-                _connection.Open();
-            }
+            MyconnectionState();
             string query = "select * from Product";
             SqlCommand cmd = new SqlCommand(query, _connection);
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
@@ -53,10 +57,7 @@ namespace productComparison.Data
 
         public void ProductDelete(int id)
         {
-            if (_connection.State != ConnectionState.Open)
-            {
-                _connection.Open();
-            }
+            MyconnectionState();
             string query = "DELETE FROM Product WHERE ProductId = @id";
             SqlCommand cmd =new SqlCommand(query,_connection);
             cmd.Parameters.AddWithValue("@id",id);

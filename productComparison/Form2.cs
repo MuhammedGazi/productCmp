@@ -43,5 +43,27 @@ namespace productComparison
             form1.Show();               
             this.Hide();
         }
+
+        private void btnHasProduct_Click(object sender, EventArgs e)
+        {
+            int id=int.Parse(txtCompanyID.Text);
+            DataTable dataTable = companyRepo.HasProduct(id);
+            dataGridView2.DataSource=dataTable;
+        }
+
+        private void btnDeleteCompany_Click(object sender, EventArgs e)
+        {
+            int id=int.Parse(txtCompanyID.Text);
+            companyRepo.DeleteCompany(id);
+            MessageBox.Show("şirket ve sahip olduğu ürünler silindi");
+        }
+
+        private void btnCompanyUpdate_Click(object sender, EventArgs e)
+        {
+            int id=int.Parse(txtCompanyID.Text);
+            string companyName=txtCompanyName.Text;
+            companyRepo.UpdateCompany(id, companyName);
+            
+        }
     }
 }
